@@ -4,22 +4,43 @@ using UnityEngine;
 
 public class playerManager : MonoBehaviour
 {
+	public float move;
+	public Rigidbody2D rb;
+	public bool isJumping;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("Horizontal") == 1)
-        {
-        	Debug.Log("1");
-        }
-        if(Input.GetAxis("Horizontal") == -1)
-        {
-        	Debug.Log("-1");
-        }
+    	move = 10f;
+
+    	if(Input.GetButton("Left"))
+    	{
+    		rb.velocity = new Vector2(-move, rb.velocity.y);
+    	}
+    	if(Input.GetButton("Right"))
+    	{
+    		rb.velocity = new Vector2(move, rb.velocity.y);
+    	}
+    	if(Input.GetButton("Right") == false && Input.GetButton("Left") == false)
+    	{
+    		rb.velocity = new Vector2(0, rb.velocity.y);
+    	}
+    	if(Input.GetButtonDown("Jump") && isJumping == false)
+    	{
+    		rb.velocity = new Vector2(rb.velocity.x, move);
+    		isJumping = true;
+    	}
+    }
+
+    void OnCollisionEnter2D(){
+
+	isJumping = false;
+
     }
 }
