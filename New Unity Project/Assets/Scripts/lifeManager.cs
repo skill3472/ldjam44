@@ -29,7 +29,7 @@ public class lifeManager : MonoBehaviour
         }
     }
 
-    void GameOver(){
+    public void GameOver(){
 
     	Debug.Log("U died!");
 

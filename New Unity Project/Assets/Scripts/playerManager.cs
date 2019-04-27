@@ -42,9 +42,12 @@ public class playerManager : MonoBehaviour
     	}
     }
 
-    void OnCollisionEnter2D(){
+    void OnCollisionEnter2D(Collision2D col){
 
 		isJumping = false;
-
+		if(col.gameObject.tag == "Killer")
+		{
+			lm.GameOver();
+		}
     }
 }
