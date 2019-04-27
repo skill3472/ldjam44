@@ -8,6 +8,7 @@ public class playerManager : MonoBehaviour
 	public Rigidbody2D rb;
 	public bool isJumping;
 	public lifeManager lm;
+	public AudioSource jump;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class playerManager : MonoBehaviour
     		rb.velocity = new Vector2(rb.velocity.x, move);
     		isJumping = true;
     		lm.health -= 2f;
+    		jump.Play();
     	}
     }
 
