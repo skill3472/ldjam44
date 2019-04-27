@@ -7,6 +7,7 @@ public class playerManager : MonoBehaviour
 	public float move;
 	public Rigidbody2D rb;
 	public bool isJumping;
+	public lifeManager lm;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +36,13 @@ public class playerManager : MonoBehaviour
     	{
     		rb.velocity = new Vector2(rb.velocity.x, move);
     		isJumping = true;
+    		lm.health -= 2f;
     	}
     }
 
     void OnCollisionEnter2D(){
 
-	isJumping = false;
+		isJumping = false;
 
     }
 }
