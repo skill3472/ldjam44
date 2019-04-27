@@ -5,17 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class buttonCtrl : MonoBehaviour
 {
+
+	public int progressIndex;
  
 	void OnQuitButton(){
 
-		Application.Quit();
+		Application.Quit(); 
 
 	}
 
 	void OnStartButton(){
 
-		SceneManager.LoadScene("LVL1");
+		SceneManager.LoadScene(progressIndex);
 
+	}
+
+	void Start(){
+
+		if(ES3.KeyExists("progress"))
+		{
+			progressIndex = ES3.Load<int>("progress");
+		}
+		else
+		{
+			progressIndex = 1;
+		}
 	}
 
 }
