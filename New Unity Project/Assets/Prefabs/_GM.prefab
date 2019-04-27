@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9149348747584398122}
   - component: {fileID: 9149348747584398125}
+  - component: {fileID: 1242468383}
   m_Layer: 0
   m_Name: _GM
   m_TagString: Untagged
@@ -46,3 +47,23 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   health: 60
   healthText: {fileID: 0}
+  character:
+  - {fileID: 121236277271461741, guid: 3099ab1802cde274282e904efd90542b, type: 3}
+  - {fileID: -4282414487258972986, guid: 3099ab1802cde274282e904efd90542b, type: 3}
+  - {fileID: -2964046583556547692, guid: 3099ab1802cde274282e904efd90542b, type: 3}
+  - {fileID: 233275956966996550, guid: 3099ab1802cde274282e904efd90542b, type: 3}
+  - {fileID: 3301996569232753736, guid: 3099ab1802cde274282e904efd90542b, type: 3}
+  - {fileID: -8441566627323160104, guid: 3099ab1802cde274282e904efd90542b, type: 3}
+  player: {fileID: 0}
+--- !u!114 &1242468383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149348747584398124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20877cd272e4b246ab7231011a4bc92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
