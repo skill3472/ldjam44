@@ -7,6 +7,7 @@ public class buttonCtrl : MonoBehaviour
 {
 
 	public int progressIndex;
+	public GameObject credits;
  
 	public void OnQuitButton(){
 
@@ -17,6 +18,18 @@ public class buttonCtrl : MonoBehaviour
 	public void OnStartButton(){
 
 		SceneManager.LoadScene(progressIndex);
+
+	}
+
+	public void OnBackButton(){
+
+		credits.SetActive(false);
+
+	}
+
+	public void OnCreditsButton(){
+
+		credits.SetActive(true);
 
 	}
 
