@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerManager : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class playerManager : MonoBehaviour
     		lm.health -= 2f;
     		jump.Play();
     	}
+
     }
 
     void OnCollisionEnter2D(Collision2D col){
@@ -49,5 +51,21 @@ public class playerManager : MonoBehaviour
 		{
 			lm.GameOver();
 		}
+    }
+
+    void OnTriggerEnter2D(Collider2D coll){
+
+    	Debug.Log("Is on trigger...");
+    	if(coll.gameObject.tag == "Finish")
+    	{
+    		Finish();
+    	}
+
+    }
+
+    public void Finish(){
+
+    	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    	Debug.Log("Level finished!");
     }
 }
