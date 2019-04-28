@@ -45,10 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
-  health: 60
+  health: 100
   healthText: {fileID: 0}
   character:
-  - {fileID: 121236277271461741, guid: 3099ab1802cde274282e904efd90542b, type: 3}
   - {fileID: -4282414487258972986, guid: 3099ab1802cde274282e904efd90542b, type: 3}
   - {fileID: -2964046583556547692, guid: 3099ab1802cde274282e904efd90542b, type: 3}
   - {fileID: 233275956966996550, guid: 3099ab1802cde274282e904efd90542b, type: 3}

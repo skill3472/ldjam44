@@ -30,29 +30,25 @@ public class lifeManager : MonoBehaviour
         {
         	GameOver();
         }
-        if(health > 50f)
+        if(health > 80f)
         {
         	player.GetComponent<SpriteRenderer>().sprite = character[0];
         }
-        if(health > 40f && health < 50)
+        if(health > 60f && health < 80f)
         {
         	player.GetComponent<SpriteRenderer>().sprite = character[1];
         }
-        if(health > 30f && health < 40)
+        if(health > 40f && health < 60f)
         {
         	player.GetComponent<SpriteRenderer>().sprite = character[2];
         }
-        if(health > 20f && health < 30)
+        if(health > 20f && health < 40f)
         {
         	player.GetComponent<SpriteRenderer>().sprite = character[3];
         }
-        if(health > 10f && health < 20)
+        if(health < 20f)
         {
         	player.GetComponent<SpriteRenderer>().sprite = character[4];
-        }
-        if(health < 10f)
-        {
-        	player.GetComponent<SpriteRenderer>().sprite = character[5];
         }
     }
 
