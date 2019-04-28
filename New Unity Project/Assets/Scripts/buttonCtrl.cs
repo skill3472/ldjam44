@@ -8,13 +8,13 @@ public class buttonCtrl : MonoBehaviour
 
 	public int progressIndex;
  
-	void OnQuitButton(){
+	public void OnQuitButton(){
 
 		Application.Quit(); 
 
 	}
 
-	void OnStartButton(){
+	public void OnStartButton(){
 
 		SceneManager.LoadScene(progressIndex);
 
