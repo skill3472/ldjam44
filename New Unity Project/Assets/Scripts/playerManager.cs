@@ -64,8 +64,10 @@ public class playerManager : MonoBehaviour
     }
 
     public void Finish(){
-
-    	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    	if(SceneManager.sceneCountInBuildSettings - 1 > SceneManager.GetActiveScene().buildIndex)
+    	{
+    		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    	}
     	Debug.Log("Level finished!");
     }
 }

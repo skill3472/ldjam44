@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class lifeManager : MonoBehaviour
 {
@@ -58,6 +59,7 @@ public class lifeManager : MonoBehaviour
     public void GameOver(){
 
     	Debug.Log("U died!");
+    	//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); <--- Dying Mechanic (To be uncommented!)
 
     }
 }
