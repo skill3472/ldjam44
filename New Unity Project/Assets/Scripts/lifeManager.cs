@@ -55,7 +55,7 @@ public class lifeManager : MonoBehaviour
     public void GameOver(){
 
     	Debug.Log("U died!");
-    	//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); <--- Dying Mechanic (To be uncommented!)
+    	//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //<--- Dying Mechanic (To be uncommented!)
 
     }
 }
