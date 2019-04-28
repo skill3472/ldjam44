@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ladderController : MonoBehaviour
 {
-	
+
 	public GameObject endpoint;
 
     // Start is called before the first frame update
@@ -15,11 +15,10 @@ public class ladderController : MonoBehaviour
 
 
 
-    void OnTriggerEnter2D(Collider2D col){
+    void OnTriggerStay2D(Collider2D col){
 
-    	if(col.gameObject.tag == "Player")
+    	if(col.gameObject.tag == "Player" && Input.GetButtonDown("Use"))
     	{
-    		Debug.Log("Touching Player!");
     		col.gameObject.transform.position = endpoint.transform.position;
     	}
 
