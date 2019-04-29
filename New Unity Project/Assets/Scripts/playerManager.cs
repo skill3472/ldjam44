@@ -10,11 +10,15 @@ public class playerManager : MonoBehaviour
 	public bool isJumping;
 	public lifeManager lm;
 	public AudioSource jump;
+	public GameObject endgame;
+	public GameObject GM;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        GM = GameObject.Find("_GM");
+        lm = GM.GetComponent<lifeManager>();
     }
 
     // Update is called once per frame
@@ -59,6 +63,10 @@ public class playerManager : MonoBehaviour
     	if(coll.gameObject.tag == "Finish")
     	{
     		Finish();
+    	}
+    	if(coll.gameObject.tag == "EndGame")
+    	{
+    		endgame.SetActive(true);
     	}
 
     }
